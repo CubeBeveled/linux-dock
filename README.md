@@ -34,9 +34,9 @@ Remove the outdated image
 docker rmi <image-id>
 ```
 
-### Before you run this change latest-tag at the end to the latest tag in the [github repository](https://github.com/portainer/portainer/tags)
+Install the new version with the `latest` tag
 ```sh
- docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest-tag
+ docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
 
 Based on these tutorials:
