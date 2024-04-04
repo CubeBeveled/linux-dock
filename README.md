@@ -36,8 +36,9 @@ docker rmi <image-id>
 
 Install the new version with the `latest` tag
 ```sh
- docker run -d -p 8000:8000 -p 9443:9443 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
+ docker run -d -p 8000:8000 -p 9000:9000 --name portainer --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v portainer_data:/data portainer/portainer-ce:latest
 ```
+If theres a not found error look at [this](https://github.com/portainer/portainer/issues/4143)
 
 Based on these tutorials:
 * [How to install Docker (and Portainer) on a RaspberryPi and run millions of apps on your RaspberryPi!](https://youtu.be/O7G3oatg5DA)
