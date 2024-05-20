@@ -40,6 +40,12 @@ Install the new version with the `latest` tag
 ```
 If theres a not found error look at [this](https://github.com/portainer/portainer/issues/4143)
 
+## To install Debian desktop on docker
+[GitHub](https://github.com/ConSol/docker-headless-vnc-container/) [Docker hub](https://hub.docker.com/r/aicampbell/vnc-ubuntu18-xfce)
+```sh
+sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop consol/debian-xfce-vnc
+```
+
 Based on these tutorials:
 * [How to install Docker (and Portainer) on a RaspberryPi and run millions of apps on your RaspberryPi!](https://youtu.be/O7G3oatg5DA)
 * [How to Update Portainer Fast, Simple, and Easy Guide](https://youtu.be/M365jgJ0O2E)
