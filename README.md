@@ -1,5 +1,6 @@
 # Linux Dock
 Small linux knowledge base
+**WARNING:** most of the instructions provided here are for arm processors only
 
 ## To Install docker
 `curl -sSL https://get.docker.com | sh`<br>
@@ -41,10 +42,18 @@ Install the new version with the `latest` tag
 If theres a not found error look at [this](https://github.com/portainer/portainer/issues/4143)
 
 ## To install Debian desktop on docker
+**OUTDATED, use below instead**
 [GitHub](https://github.com/ConSol/docker-headless-vnc-container/) [Docker hub](https://hub.docker.com/r/aicampbell/vnc-ubuntu18-xfce)
 ```sh
 sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop consol/debian-xfce-vnc
 ```
+## To run ubuntu with LXQT desktop
+```sh
+sudo docker run --detach -e USER=root -e RESOLUTION=1280x720 -p 5900:5900 carlonluca/vnc-desktop:jammy-lxqt
+```
+Then connect to port 5900 via VNC
+You can also change the resolution (duh)
+_Original [github](https://github.com/carlonluca/docker-vnc-desktop) [docker image](https://hub.docker.com/r/carlonluca/vnc-desktop)_
 
 ## To run xfce4 thru vnc in ubuntu server
 ### Setup
