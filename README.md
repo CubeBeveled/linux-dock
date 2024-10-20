@@ -47,7 +47,6 @@ sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop 
 ```
 
 # To run xfce4 thru vnc in ubuntu server
-# VNC shit
 ## Setup
 Install required packages
 ```sh
