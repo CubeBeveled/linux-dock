@@ -46,8 +46,8 @@ If theres a not found error look at [this](https://github.com/portainer/portaine
 sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop consol/debian-xfce-vnc
 ```
 
-# To run xfce4 thru vnc in ubuntu server
-## Setup
+## To run xfce4 thru vnc in ubuntu server
+### Setup
 Install required packages
 ```sh
 sudo apt install xfce4 xfce4-goodies xfonts-75dpi xfonts-100dpi
