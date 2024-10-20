@@ -1,5 +1,5 @@
-# Docker Dock
-This like docker documentation but to get started
+# Linux Dock
+Small linux knowledge base
 
 ## To Install docker
 `curl -sSL https://get.docker.com | sh`<br>
@@ -45,6 +45,58 @@ If theres a not found error look at [this](https://github.com/portainer/portaine
 ```sh
 sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop consol/debian-xfce-vnc
 ```
+
+# To run xfce4 thru vnc in ubuntu server
+# VNC shit
+## Setup
+Install required packages
+```sh
+sudo apt install xfce4 xfce4-goodies xfonts-75dpi xfonts-100dpi
+```
+Generate config files
+```sh
+vncserver
+vncserver -kill :1 # :1 is the monitor index thing
+```
+Change startup config file
+```sh
+# Backup the original
+mv ~/.vnc/xstartup ~/.vnc/xstartup.bak
+
+# Create and edit the new one
+nano ~/.vnc/xstartup
+```
+In the new `xstartup` file write 
+```
+#!/bin/bash
+xrdb $HOME/.Xresources
+startxfce4 &
+```
+Set the correct permissions for the new file
+```sh
+chmod +x ~/.vnc/xstartup
+```
+Create the Xresources file (*might not be necessary*)
+```sh
+sudo touch /root/.Xresources
+```
+
+**To start it**
+```
+vncserver
+```
+**To stop it**
+```
+vncserver -kill :1
+```
+**To connect to it**
+use a vnc client and connect to the 5901 port with the specified password
+**To read display 1's log**
+```
+cat /home/beveledcube/.vnc/ubuntu:1.log
+```
+
+[Original Digital Ocean tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-vnc-on-ubuntu-22-04) ( Secure connection part was skipped )
 
 Based on these tutorials:
 * [How to install Docker (and Portainer) on a RaspberryPi and run millions of apps on your RaspberryPi!](https://youtu.be/O7G3oatg5DA)
