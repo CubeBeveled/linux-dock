@@ -55,6 +55,13 @@ sudo docker run --detach -e USER=root -e RESOLUTION=1280x720 -p 5900:5900 carlon
 ```
 Then connect to port 5900 via VNC
 You can also change the resolution (duh)
+
+For persistent storage use:
+```sh
+sudo docker run --detach -v vnc-data-etc:/etc -v vnc-data-home:/home -v vnc-data-var:/var -e USER=root -e RESOLUTION=1280x720 -p 5900:5900 carlonluca/vnc-desktop:jammy-lxqt
+ ```
+This command creates a volume for /etc /home and /var. A volume for / is not used since docker does not like that apparently
+
 _Original [github](https://github.com/carlonluca/docker-vnc-desktop) [docker image](https://hub.docker.com/r/carlonluca/vnc-desktop)_
 
 ## To run xfce4 thru vnc in ubuntu server
