@@ -49,7 +49,7 @@ _Unable to launch minecraft_
 sudo docker run -d -p 5901:5901 -p 6901:6901 --user 0 --hostname debian-desktop consol/debian-xfce-vnc
 ```
 ## To run ubuntu with LXQT desktop
-_Can run minecraft_
+_Could run minecraft, LWJGL doesnt load properly_
 ```sh
 sudo docker run --detach -e USER=root -e RESOLUTION=1280x720 -p 5900:5900 carlonluca/vnc-desktop:jammy-lxqt
 ```
