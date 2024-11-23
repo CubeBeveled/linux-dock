@@ -4,7 +4,7 @@ Small linux knowledge base
 
 ## To Install docker
 `curl -sSL https://get.docker.com | sh`<br>
-Executes code from [this website]("https://get.docker.com")<br>
+Executes code from [this website](https://get.docker.com)<br>
 Run the command `docker` to make sure it was installed correctly, if it was it should list the command's documentation<br>
 To allow a user to access docker: `sudo usermod -aG docker <username>`<br>
 
