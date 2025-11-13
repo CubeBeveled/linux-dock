@@ -113,3 +113,10 @@ cat /home/beveledcube/.vnc/ubuntu:1.log
 Based on these tutorials:
 * [How to install Docker (and Portainer) on a RaspberryPi and run millions of apps on your RaspberryPi!](https://youtu.be/O7G3oatg5DA)
 * [How to Update Portainer Fast, Simple, and Easy Guide](https://youtu.be/M365jgJ0O2E)
+
+## To change the DNS server
+I am 100% sure this works on cachyos
+```sh
+sudo nano /etc/systemd/resolved.conf
+sudo systemctl restart systemd-resolved.service
+```
